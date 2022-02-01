@@ -112,17 +112,17 @@ Examples:
 start = 2022-01-31
 interval = P1D
 multiplier = 3
-return value = 2021-02-03
+return value = 2022-02-03
 
 start = 2022-01-31
 interval = P1D
 multiplier = 0
-return value = 2021-01-31
+return value = 2022-01-31
 
 start = 2022-01-31
 interval = P1M
 multiplier = 1
-return value = 2021-02-28
+return value = 2022-02-28
 
 start = 2019-01-31
 interval = P1Y1M
