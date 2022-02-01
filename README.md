@@ -43,6 +43,12 @@ You will be graded on whether your code correctly implements the specified algor
 
 ## Setup
 
+If you're working on Windows, run this Git command in a terminal before you start working on this project:
+
+```
+git config --global core.autocrlf false
+```
+
 Run through the assignment 1 setup instructions, but for this `datetime-calculator` repository instead of the assignment 1 `calculator` repository.
 
 To submit your work, push your code to your `datetime-calculator` fork on GitLab and submit your writeup to the Canvas assignment dropbox.
