@@ -15,7 +15,6 @@ import {
 } from "./Calculator";
 
 const handleOnSubmit = (outputID: string, run: () => string) => () => {
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     const output = document.getElementById(outputID)!;
     try {
         output.innerHTML = run();
@@ -49,8 +48,8 @@ window.onload = () => {
         const start = getInputElementById("daysBetweenStart")!;
         const end = getInputElementById("daysBetweenEnd")!;
         return daysBetween(
-            LocalDate.parse(end.value),
             LocalDate.parse(start.value),
+            LocalDate.parse(end.value),
         ).toString();
     });
 
