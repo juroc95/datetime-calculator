@@ -9,7 +9,10 @@ export function daysBetween(
     start: LocalDate,
     end: LocalDate,
 ): number {
-    throw new Error("unimplemented");
+    const endTotal = end.dayOfYear() + ((end.year() - 1) * 365);
+    const startTotal = start.dayOfYear() + ((start.year() - 1) * 365);
+    const difference = endTotal - startTotal;
+    return difference;
 }
 
 export function afterIntervalTimes(
@@ -17,7 +20,10 @@ export function afterIntervalTimes(
     interval: Period,
     multiplier: number,
 ): LocalDate {
-    throw new Error("unimplemented");
+    let afterInterval = start;
+    for (let i = 0; i < multiplier; ++ i)
+        afterInterval = afterInterval.plus(interval);
+    return afterInterval;
 }
 
 export function recurringEvent(
