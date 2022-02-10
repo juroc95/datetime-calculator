@@ -32,5 +32,16 @@ export function recurringEvent(
     interval: Period,
     timeOfDay: LocalTime,
 ): LocalDateTime[] {
-    throw new Error("unimplemented");
+    const result = [];
+    let temp = start;
+    temp = temp.withHour(0);
+    temp = temp.withMinute(0);
+    temp = temp.plusHours(timeOfDay.hour());
+    temp = temp.plusMinutes(timeOfDay.minute());
+    while (end.isAfter(temp)) {
+        if (start.isBefore(temp))
+            result.push(temp);
+        temp = temp.plus(interval);
+    }
+    return result;
 }
